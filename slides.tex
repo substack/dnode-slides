@@ -13,16 +13,44 @@
 \frame{\titlepage}
 
 \frame{
+    \frametitle{King Ryan}
+    \begin{columns}[c]
+    \column{.5\textwidth}
+        \includegraphics[scale=0.8]{images/king_ryan.png}
+    \column{.5\textwidth} 
+        Ryan decrees
+        \pause
+        \begin{itemize}
+        \item Thou shalt have only one thread.
+        \pause
+        \item Thy IO shalt be asynchronous.
+        \end{itemize}
+    \end{columns}
+}
+
+\frame{
     \frametitle{call remote functions!}
     {
-        remote method invocation
+        \includegraphics[scale=0.8]{images/cups.png}
+        
+        \vspace{1em}
+        
+        If only there were an easier way to expose backend code
+        \pause
+        that complied with the King's wishes.
+        \pause
+        
+        Well there are lots of these actually.
+        \pause
+        Most of them suck.
     }
 }
 
 \frame{
     \frametitle{At a glance}
     {
-        dnode is 
+        dnode gets out of your way
+        \pause
         \begin{itemize}
         \item{fundamentally asynchronous}
         \item[]{
@@ -42,6 +70,14 @@
         \item[]{
             \begin{itemize}
             \item use it on the browser or the server
+            \end{itemize}
+        }
+        \pause
+        \item{simple yet powerful semantics}
+        \item[]{
+            \begin{itemize}
+            \item generalized callback wrapping
+            \item no implicit return callbacks
             \end{itemize}
         }
         \end{itemize}
@@ -64,19 +100,57 @@
     }
 }
 
+\frame{
+    \frametitle{Fuck yeah callbacks}
+    {
+        \begin{columns}[c]
+        \column{.5\textwidth}
+        \includegraphics[scale=0.5]{images/fuck_yeah.png}
+        \column{.5\textwidth} 
+            \pause
+            \begin{itemize}
+            \item and now let's do that in the browser
+            \end{itemize}
+        \end{columns}
+    }
+}
+
+\frame{
+    \frametitle{Retrofitting the server}
+    {
+        \lstinputlisting{code/browser/server.js}
+    }
+}
+
+\frame{
+    \frametitle{Browser code}
+    {
+        \small
+        \lstinputlisting{code/browser/index.html}
+    }
+}
+
+\frame{
+    \frametitle{It works in the browser! Huzzah!}
+    {
+        \includegraphics[scale=0.9]{images/browser.png}
+    }
+}
 
 \frame{
     \frametitle{How it doesn't work}
     {
-        \begin{itemize}
-        \item{Function.prototype.toString()}
-        \item{eval()}
-        \item{$<$script$>$ tag injection}
-        \end{itemize}
-        
-        \pause
-        NOT THESE!
-        
+        \begin{columns}[c]
+        \column{.6\textwidth}
+            dnode DOESN'T use these
+            \begin{itemize}
+            \item eval()
+            \item Function.prototype.toString()
+            \item $<$script$>$ tag injection
+            \end{itemize}
+        \column{.5\textwidth} 
+            \includegraphics[scale=0.8]{images/no.png}
+        \end{columns}
     }
 }
 
@@ -105,11 +179,12 @@
     \frametitle{It's callbacks all the way down!}
     {
         \lstinputlisting{code/turtles.js}
+        \includegraphics[scale=0.5]{images/thomas_turtle.png}
     }
 }
 
 \frame{
-    \frametitle{OOP is just hashes of functions}
+    \frametitle{OOP javascript style}
     {
         \lstinputlisting{code/objects.js}
     }
@@ -118,27 +193,17 @@
 \frame{
     \frametitle{Good news for you!}
     {
-        No need to write your own
-        \begin{itemize}
-        \item{method dispatcher}
-        \item{state machine}
-        \item{serialization protocol}
-        \end{itemize}
-    }
-}
-
-\frame{
-    \frametitle{Retrofitting the server}
-    {
-        \lstinputlisting{code/browser/server.js}
-    }
-}
-
-\frame{
-    \frametitle{Browser code}
-    {
-        \small
-        \lstinputlisting{code/browser/index.html}
+        \begin{columns}[c]
+        \column{.5\textwidth} 
+            No need to write your own
+            \begin{itemize}
+            \item{method dispatcher}
+            \item{state machine}
+            \item{serialization protocol}
+            \end{itemize}
+        \column{.5\textwidth}
+            \includegraphics[scale=0.8]{images/robot_stare.png}
+        \end{columns}
     }
 }
 
