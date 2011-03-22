@@ -1,0 +1,5 @@
+{
+    "method" : "zing",
+    "arguments" : [ 100, "[Function]" ],
+    "callbacks" : { "0" : ["1"] }
+}

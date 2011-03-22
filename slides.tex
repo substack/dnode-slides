@@ -1,0 +1,159 @@
+\documentclass{beamer}
+\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\title{dnode}
+\subtitle{remote execution in the kingdom of node.js}
+\author{James Halliday (substack)}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\frame{
+    \frametitle{call remote functions!}
+    {
+        remote method invocation
+    }
+}
+
+\frame{
+    \frametitle{At a glance}
+    {
+        dnode is 
+        \begin{itemize}
+        \item{fundamentally asynchronous}
+        \item[]{
+            \begin{itemize}
+            \item no return values
+            \end{itemize}
+        }
+        \pause
+        \item{symmetric}
+        \item[]{
+            \begin{itemize}
+            \item both sides can call the other's methods
+            \end{itemize}
+        }
+        \pause
+        \item{abstract}
+        \item[]{
+            \begin{itemize}
+            \item use it on the browser or the server
+            \end{itemize}
+        }
+        \end{itemize}
+    }
+}
+
+\frame{
+    \frametitle{Zing example server!}
+    {
+        \lstinputlisting{code/zing/server.js}
+    }
+}
+
+\frame{
+    \frametitle{Zing example client!}
+    {
+        \lstinputlisting{code/zing/client.js}
+        \pause
+        \lstinputlisting{code/zing/console}
+    }
+}
+
+
+\frame{
+    \frametitle{How it doesn't work}
+    {
+        \begin{itemize}
+        \item{Function.prototype.toString()}
+        \item{eval()}
+        \item{$<$script$>$ tag injection}
+        \end{itemize}
+        
+        \pause
+        NOT THESE!
+        
+    }
+}
+
+\frame{
+    \frametitle{How it does work}
+    {
+        When a function gets called...
+        
+        \begin{itemize}
+        \item{a recursive walk pulls out all the functions from the arguments}
+        \item{function paths and IDs sent alongside}
+        \item{handles cycles too}
+        \end{itemize}
+        
+        \pause
+        \small
+        \lstinputlisting{code/protocol_message.json}
+        \normalsize
+        
+        \pause
+        This transformation is recursive!
+    }
+}
+
+\frame{
+    \frametitle{It's callbacks all the way down!}
+    {
+        \lstinputlisting{code/turtles.js}
+    }
+}
+
+\frame{
+    \frametitle{OOP is just hashes of functions}
+    {
+        \lstinputlisting{code/objects.js}
+    }
+}
+
+\frame{
+    \frametitle{Good news for you!}
+    {
+        No need to write your own
+        \begin{itemize}
+        \item{method dispatcher}
+        \item{state machine}
+        \item{serialization protocol}
+        \end{itemize}
+    }
+}
+
+\frame{
+    \frametitle{Retrofitting the server}
+    {
+        \lstinputlisting{code/browser/server.js}
+    }
+}
+
+\frame{
+    \frametitle{Browser code}
+    {
+        \small
+        \lstinputlisting{code/browser/index.html}
+    }
+}
+
+\frame{
+    \frametitle{Git it!}
+    {
+        \begin{center}
+        \huge
+        github.com/substack/dnode
+        
+        \vspace{2em}
+        
+        github.com/substack/dnode-slides
+        \end{center}
+    }
+}
+
+\end{document}

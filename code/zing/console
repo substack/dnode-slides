@@ -1,0 +1,5 @@
+code $ node zing_server.js &
+[1] 21671
+code $ node zing_client.js 
+n = 6600
+^C
