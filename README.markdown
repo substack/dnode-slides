@@ -1,7 +1,16 @@
 dnode slides
 ============
 
-This repo contains the LaTeX files and images for a node.js talk I gave about
-dnode at parisoma in San Francisco on March 22, 2011.
+This repo contains the LaTeX files and images for talks I give about dnode.
 
-[dnode-slides.pdf](http://substack.net/doc/dnode-slides.pdf)
+### March 22nd, 2011
+
+Parisoma, San Francisco, California
+
+[dnode_slides_parisoma.pdf](http://substack.net/doc/dnode_slides_parisoma.pdf)
+
+### May 5th, 2011
+
+Pure Space, Portland, Oregon
+
+[dnode_slides_nodeconf.pdf](http://substack.net/doc/dnode_slides_nodeconf.pdf)
