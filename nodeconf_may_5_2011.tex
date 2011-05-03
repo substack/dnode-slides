@@ -168,6 +168,43 @@
 \end{frame}
 
 \begin{frame}
+    \frametitle{require('dnode')}
+    \large
+    dnode(object or constructor to expose)
+    \newline
+    
+    \normalsize
+    \fbox{\lstinputlisting{code/api/constructor.js}}
+    \newline
+    
+    \begin{itemize}
+    \pause
+    \item remote is available but hasn't been populated yet
+    
+    \pause
+    \item conn.on('ready', fn) fires when remote is ready
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{connect and listen}
+    \large
+    
+    .connect(port, host, opts, cb...)
+    
+    .listen(port, host, opts, cb...)
+    
+    \begin{itemize}
+    \item parameters can be any order
+    \pause
+    \item cb gets (remote, conn) too
+    \pause
+    \item dnode.connect === dnode({}).connect
+    \item dnode.listen === dnode({}).listen
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
     \frametitle{callbacks fo' real}
     \begin{columns}[c]
     \column{.2\textwidth}
@@ -186,7 +223,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{nest callbacks however}
+    \frametitle{nest callbacks howevs}
     \begin{columns}[c]
     \column{.2\textwidth}
         \includegraphics[scale=0.28]{images/all_the_way_down.png}
@@ -201,6 +238,17 @@
         
         \end{center}
     \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{nest it, yo}
+    \begin{center}
+        \huge
+        Nesting!
+        \newline
+        
+        \includegraphics[scale=0.5]{images/nest.png}
+    \end{center}
 \end{frame}
 
 \begin{frame}
@@ -239,14 +287,44 @@
     \end{columns}
 \end{frame}
 
-\frame{
+\begin{frame}
+    \frametitle{dnode in ruby}
+    \begin{center}
+        \huge
+        github.com/substack/dnode-ruby
+        \newline
+        \normalsize
+        \fbox{\lstinputlisting{code/client.rb}}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{dnode in perl}
+    \begin{center}
+        \huge
+        github.com/substack/dnode-perl
+        \newline
+        \normalsize
+        \fbox{\lstinputlisting{code/client.pl}}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{dnode in java?!}
+    \begin{center}
+        \huge
+        github.com/aslakhellesoy/dnode-java
+        \newline
+        \includegraphics[scale=0.6]{images/robot_stare.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
     \frametitle{Git it!}
-    {
-        \begin{center}
+    \begin{center}
         \huge
         github.com/substack/dnode
-        \end{center}
-    }
-}
+    \end{center}
+\end{frame}
 
 \end{document}
