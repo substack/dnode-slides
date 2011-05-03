@@ -130,25 +130,75 @@ then call the server's .zing() in your client!
 
 \begin{frame}
     \frametitle{callbacks fo' real}
-\end{frame}
-
-\end{frame}
-
-\frame{
-    and you can pass callbacks to your callbacks!
-}
-
-\frame{
     \begin{columns}[c]
-    \column{.3\textwidth}
-        \includegraphics[scale=0.35]{images/all_the_way_down.png}
-    \column{.7\textwidth}
+    \column{.2\textwidth}
+        \includegraphics[scale=0.28]{images/all_the_way_down.png}
+    \column{.8\textwidth}
         \begin{center}
+        \fbox{\lstinputlisting{code/turtles/continuation.js}}
+        \newline
+        
+        \pause
         \huge
         It's callbacks all the way down.
+        
         \end{center}
     \end{columns}
-}
+\end{frame}
+
+\begin{frame}
+    \frametitle{nest callbacks however}
+    \begin{columns}[c]
+    \column{.2\textwidth}
+        \includegraphics[scale=0.28]{images/all_the_way_down.png}
+    \column{.8\textwidth}
+        \begin{center}
+        \fbox{\lstinputlisting{code/turtles/data.js}}
+        \newline
+        
+        \pause
+        \huge
+        dnode hunts down callbacks on a deep traversal
+        
+        \end{center}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{nesting your server methods}
+    \begin{columns}[c]
+    \column{.2\textwidth}
+        \includegraphics[scale=0.28]{images/all_the_way_down.png}
+    \column{.8\textwidth}
+        \begin{center}
+        \fbox{\lstinputlisting{code/turtles/server.js}}
+        \newline
+        
+        \pause
+        \huge
+        nest your server function definitions
+        
+        \end{center}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{nesting your client methods}
+    \begin{columns}[c]
+    \column{.2\textwidth}
+        \includegraphics[scale=0.28]{images/all_the_way_down.png}
+    \column{.8\textwidth}
+        \begin{center}
+        \fbox{\lstinputlisting{code/turtles/client.js}}
+        \newline
+        
+        \pause
+        \huge
+        nest your client function definitions
+        
+        \end{center}
+    \end{columns}
+\end{frame}
 
 \frame{
     You can pull the same trick in the browser.
