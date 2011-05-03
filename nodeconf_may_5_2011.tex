@@ -14,7 +14,7 @@
 
 \begin{frame}
 
-\frametitle{DNode: Freestyle RPC}
+\frametitle{dnode: freestyle rpc}
 \begin{center}
 \includegraphics[scale=0.3]{images/freestyle_turtle.png}
 \end{center}
@@ -23,7 +23,7 @@
 
 \begin{frame}
 \begin{center}
-\frametitle{delicious sky cake}
+\frametitle{asynchronous sky cake}
 \huge
 
 dnode makes stringing together processes easy as cake
@@ -38,7 +38,7 @@ dnode makes stringing together processes easy as cake
 \frametitle{zing server}
 
 \huge
-Just hack up a server
+just hack up a server
 \newline
 
 \normalsize
@@ -62,59 +62,77 @@ then call the server's .zing() in your client!
 \end{frame}
 
 \begin{frame}
-\frametitle{client and server side by side}
-\includegraphics[scale=0.6]{images/zing_flow_0.png}
+    \frametitle{none of this noise}
+    
+    \begin{columns}[c]
+    \column{.2\textwidth}
+        \includegraphics[scale=0.4]{images/no.png}
+    \column{.8\textwidth}
+        \huge
+        \begin{itemize}
+            \item No schemas
+            \item No XML
+            \item No custom dispatching
+        \end{itemize}
+        \pause
+        Just call functions!
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{pass along n...}
-\includegraphics[scale=0.6]{images/zing_flow_1.png}
+    \frametitle{client and server side by side}
+    \includegraphics[scale=0.6]{images/zing_flow_0.png}
 \end{frame}
 
 \begin{frame}
-\frametitle{pass along the cb...}
-\includegraphics[scale=0.6]{images/zing_flow_2.png}
+    \frametitle{pass along n...}
+    \includegraphics[scale=0.6]{images/zing_flow_1.png}
 \end{frame}
 
 \begin{frame}
-\frametitle{then just call the cb...}
-\includegraphics[scale=0.6]{images/zing_flow_3.png}
+    \frametitle{pass along the cb...}
+    \includegraphics[scale=0.6]{images/zing_flow_2.png}
 \end{frame}
 
 \begin{frame}
-\frametitle{with the parameters you passed in...}
-\includegraphics[scale=0.6]{images/zing_flow_4.png}
+    \frametitle{then just call the cb...}
+    \includegraphics[scale=0.6]{images/zing_flow_3.png}
 \end{frame}
 
 \begin{frame}
-\frametitle{and your callback gets the result...}
-\includegraphics[scale=0.6]{images/zing_flow_5.png}
+    \frametitle{with the parameters you passed in...}
+    \includegraphics[scale=0.6]{images/zing_flow_4.png}
 \end{frame}
 
 \begin{frame}
-\frametitle{which you can use for whatevs}
-\includegraphics[scale=0.6]{images/zing_flow_6.png}
+    \frametitle{and your callback gets the result...}
+    \includegraphics[scale=0.6]{images/zing_flow_5.png}
 \end{frame}
 
 \begin{frame}
-\begin{center}
-\huge
-\frametitle{That's all it takes!}
-
-\normalsize
-\fbox{
-    \lstinputlisting{code/zing/output}
-}
-\end{center}
+    \frametitle{which you can use for whatevs}
+    \includegraphics[scale=0.6]{images/zing_flow_6.png}
 \end{frame}
 
 \begin{frame}
-
+    \frametitle{that's all it takes!}
+    \begin{center}
+        \fbox{\lstinputlisting{code/zing/output}}
+    \end{center}
 \end{frame}
 
-\frame{
-    You can pass in callbacks
-}
+\begin{frame}
+    \frametitle{fuck yeah, callbacks!}
+    \begin{center}
+        \includegraphics[scale=0.5]{images/fuck_yeah.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{callbacks fo' real}
+\end{frame}
+
+\end{frame}
 
 \frame{
     and you can pass callbacks to your callbacks!
