@@ -13,52 +13,46 @@
 \begin{document}
 
 \begin{frame}
-
-\frametitle{dnode: freestyle rpc}
-\begin{center}
-\includegraphics[scale=0.3]{images/freestyle_turtle.png}
-\end{center}
-
+    \frametitle{dnode: freestyle rpc}
+    \begin{center}
+        \includegraphics[scale=0.3]{images/freestyle_turtle.png}
+    \end{center}
 \end{frame}
 
 \begin{frame}
-\begin{center}
-\frametitle{asynchronous sky cake}
-\huge
+    \begin{center}
+        \frametitle{asynchronous sky cake}
+        \huge
 
-dnode makes stringing together processes easy as cake
-\newline
+        dnode makes stringing together processes easy as cake
+        \newline
 
-\includegraphics[scale=0.5]{images/sky_cake.png}
-
-\end{center}
+        \includegraphics[scale=0.5]{images/sky_cake.png}
+    \end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{zing server}
+    \frametitle{zing server}
 
-\huge
-just hack up a server
-\newline
+    \huge
+    just hack up a server
+    \newline
 
-\normalsize
-\fbox{
-    \lstinputlisting{code/zing/server.js}
-}
-
+    \normalsize
+    \fbox{\lstinputlisting{code/zing/server.js}}
 \end{frame}
 
 \begin{frame}
-\frametitle{zing client}
+    \frametitle{zing client}
 
-\huge
-then call the server's .zing() in your client!
-\newline
+    \huge
+    then call the server's .zing() in your client!
+    \newline
 
-\normalsize
-\fbox{
-    \lstinputlisting{code/zing/client.js}
-}
+    \normalsize
+    \fbox{
+        \lstinputlisting{code/zing/client.js}
+    }
 \end{frame}
 
 \begin{frame}
@@ -124,8 +118,64 @@ then call the server's .zing() in your client!
 \begin{frame}
     \frametitle{fuck yeah, callbacks!}
     \begin{center}
-        \includegraphics[scale=0.5]{images/fuck_yeah.png}
+        \includegraphics[scale=0.4]{images/fuck_yeah.png}
+        \newline
+        \pause
+        \huge
+        Now let's do that in the browser.
     \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{zing tcp server}
+    
+    \huge
+    network server
+    \newline
+    
+    \normalsize
+    \fbox{\lstinputlisting{code/zing/server.js}}
+\end{frame}
+
+\begin{frame}
+    \frametitle{zing web server}
+    
+    \huge
+    web server
+    \newline
+    
+    \normalsize
+    \fbox{\lstinputlisting{code/browser/server.js}}
+\end{frame}
+
+\begin{frame}
+    \frametitle{zing tcp \& web server why not}
+    
+    \huge
+    network and web server
+    \newline
+    
+    \normalsize
+    \fbox{\lstinputlisting{code/browser/both.js}}
+\end{frame}
+
+\begin{frame}
+    \frametitle{zing web client}
+    \huge
+    just hack up an index.html:
+    \newline
+    
+    \scriptsize
+    \fbox{\lstinputlisting{code/browser/index.html}}
+\end{frame}
+
+\begin{frame}
+    \frametitle{zing web output}
+    \huge
+    By the power of socket.io...
+    \newline
+    
+    \includegraphics[scale=0.6]{images/browser.png}
 \end{frame}
 
 \begin{frame}
@@ -199,10 +249,6 @@ then call the server's .zing() in your client!
         \end{center}
     \end{columns}
 \end{frame}
-
-\frame{
-    You can pull the same trick in the browser.
-}
 
 \frame{
     \frametitle{Git it!}
